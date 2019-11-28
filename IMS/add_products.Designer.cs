@@ -46,17 +46,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbEditSup = new System.Windows.Forms.ComboBox();
             this.cbEditDep = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.cbEditCat = new System.Windows.Forms.ComboBox();
+            this.txtEditBarcode = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtEditName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEditDesc = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtEditName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtEditBarcode = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -238,6 +238,15 @@
             this.cbEditDep.Size = new System.Drawing.Size(263, 21);
             this.cbEditDep.TabIndex = 27;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Barcode";
+            // 
             // cbEditCat
             // 
             this.cbEditCat.FormattingEnabled = true;
@@ -245,6 +254,13 @@
             this.cbEditCat.Name = "cbEditCat";
             this.cbEditCat.Size = new System.Drawing.Size(263, 21);
             this.cbEditCat.TabIndex = 26;
+            // 
+            // txtEditBarcode
+            // 
+            this.txtEditBarcode.Location = new System.Drawing.Point(72, 22);
+            this.txtEditBarcode.Name = "txtEditBarcode";
+            this.txtEditBarcode.Size = new System.Drawing.Size(263, 20);
+            this.txtEditBarcode.TabIndex = 17;
             // 
             // btnEdit
             // 
@@ -254,6 +270,16 @@
             this.btnEdit.TabIndex = 25;
             this.btnEdit.Text = "Edit Product ";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Name";
             // 
             // label1
             // 
@@ -264,6 +290,13 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Supplier";
             // 
+            // txtEditName
+            // 
+            this.txtEditName.Location = new System.Drawing.Point(72, 59);
+            this.txtEditName.Name = "txtEditName";
+            this.txtEditName.Size = new System.Drawing.Size(263, 20);
+            this.txtEditName.TabIndex = 19;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -272,6 +305,15 @@
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 23;
             this.label2.Text = "Department";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Desc";
             // 
             // label3
             // 
@@ -288,47 +330,6 @@
             this.txtEditDesc.Name = "txtEditDesc";
             this.txtEditDesc.Size = new System.Drawing.Size(263, 20);
             this.txtEditDesc.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Desc";
-            // 
-            // txtEditName
-            // 
-            this.txtEditName.Location = new System.Drawing.Point(72, 59);
-            this.txtEditName.Name = "txtEditName";
-            this.txtEditName.Size = new System.Drawing.Size(263, 20);
-            this.txtEditName.TabIndex = 19;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Name";
-            // 
-            // txtEditBarcode
-            // 
-            this.txtEditBarcode.Location = new System.Drawing.Point(72, 22);
-            this.txtEditBarcode.Name = "txtEditBarcode";
-            this.txtEditBarcode.Size = new System.Drawing.Size(263, 20);
-            this.txtEditBarcode.TabIndex = 17;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Barcode";
             // 
             // add_products
             // 

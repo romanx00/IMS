@@ -18,6 +18,8 @@ namespace IMS
         public add_products()
         {
             InitializeComponent();
+            
+      
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
@@ -43,7 +45,7 @@ namespace IMS
         public void fill_ddc()
         {
             // drop down for category 
-            cbCat.Items.Clear();
+            //cbCat.Items.Clear();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType= CommandType.Text;
             cmd.CommandText = "select * from CATEGORY";
@@ -59,7 +61,7 @@ namespace IMS
         public void fill_ddd()
         {
             // drop down for department 
-            cbDep.Items.Clear();
+           // cbDep.Items.Clear();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from DEPARTMENT";
@@ -76,7 +78,7 @@ namespace IMS
         public void fill_dds()
         {
             //drop down for Supplier 
-            cbSup.Items.Clear();
+            //cbSup.Items.Clear();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from SUPPLIER";
@@ -195,6 +197,19 @@ namespace IMS
             
 
             
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+            int i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "udate PRODUCTS set Barcode = '"+txtEditBarcode.Text+"', Name = '"+txtEditName.Text+"', Desc = '"+txtEditDesc.Text+"'," +
+                " Category = '"+cbEditCat.SelectedItem.ToString()+"',  Department = '"+cbEditDep.SelectedItem.ToString()+"', Supplier = '"+cbEditSup.SelectedItem.ToString()+"' where id = '"+i+"'";
+            cmd.ExecuteNonQuery();
+            //fill_dg();
         }
     }
 }

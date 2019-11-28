@@ -44,6 +44,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,6 +183,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(939, 255);
             this.dataGridView1.TabIndex = 15;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(89, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(786, 165);
+            this.panel1.TabIndex = 16;
+            // 
             // new_supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,6 +211,7 @@
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
+            this.Controls.Add(this.panel1);
             this.Name = "new_supplier";
             this.Text = "new_supplier";
             this.Load += new System.EventHandler(this.new_supplier_Load);
@@ -230,5 +239,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

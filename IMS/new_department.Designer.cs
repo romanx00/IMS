@@ -36,6 +36,7 @@
             this.lblDesc = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,6 +111,13 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(146, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(701, 134);
+            this.panel1.TabIndex = 9;
+            // 
             // new_department
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +131,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtName);
+            this.Controls.Add(this.panel1);
             this.Name = "new_department";
             this.Text = "new_department";
             this.Load += new System.EventHandler(this.new_department_Load);
@@ -142,5 +151,6 @@
         private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Panel panel1;
     }
 }

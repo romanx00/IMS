@@ -36,6 +36,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,6 +111,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 235);
             this.dataGridView1.TabIndex = 7;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(122, 52);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(457, 145);
+            this.panel1.TabIndex = 8;
+            // 
             // new_category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +131,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.panel1);
             this.Name = "new_category";
             this.Text = "new_category";
             this.Load += new System.EventHandler(this.new_category_Load);
@@ -142,5 +151,6 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
