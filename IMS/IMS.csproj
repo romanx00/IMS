@@ -77,6 +77,24 @@
     <Compile Include="MDIParent1.Designer.cs">
       <DependentUpon>MDIParent1.cs</DependentUpon>
     </Compile>
+    <Compile Include="new_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_category.Designer.cs">
+      <DependentUpon>new_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="new_department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_department.Designer.cs">
+      <DependentUpon>new_department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="new_supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_supplier.Designer.cs">
+      <DependentUpon>new_supplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="new_user.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +117,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_category.resx">
+      <DependentUpon>new_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_department.resx">
+      <DependentUpon>new_department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_supplier.resx">
+      <DependentUpon>new_supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="new_user.resx">
       <DependentUpon>new_user.cs</DependentUpon>

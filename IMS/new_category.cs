@@ -2,26 +2,28 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+
 namespace IMS
 {
-    public partial class Units : Form
+    public partial class new_category : Form
+
     {
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\alexsander\source\repos\IMS\IMS\IMS.mdf;Integrated Security = True");
 
-        public Units()
+        public new_category()
         {
             InitializeComponent();
         }
 
-        private void Units_Load(object sender, EventArgs e)
+        private void new_category_Load(object sender, EventArgs e)
         {
-            if(con.State == ConnectionState.Open)
+            if (con.State == ConnectionState.Open)
             {
                 con.Close();
 
@@ -29,44 +31,52 @@ namespace IMS
             con.Open();
             display();
         }
+        public void display()
+        {
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * from Category";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             int count = 0;
             SqlCommand cmd1 = con.CreateCommand();
             cmd1.CommandType = CommandType.Text;
-            cmd1.CommandText = "SELECT * from UNITS where unit= '"+txtUnit.Text+"'";
+            cmd1.CommandText = "SELECT * from Category where name = '" + txtName.Text + "'";
             cmd1.ExecuteNonQuery();
             DataTable dt1 = new DataTable();
             SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
             da1.Fill(dt1);
-            count  = Convert.ToInt32(dt1.Rows.Count.ToString());
-            if(count==0)
+            count = Convert.ToInt32(dt1.Rows.Count.ToString());
+            if (count == 0)
             {
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Insert into UNITS values ('" + txtUnit.Text + "')";
+                cmd.CommandText = "Insert into Category values ('" + txtName.Text + "','" + txtDesc.Text + "')";
                 cmd.ExecuteNonQuery();
-                txtUnit.Text = ("");
+                txtName.Text = txtDesc.Text = ("");
                 display();
+                txtName.Focus();
+                MessageBox.Show("New Category added!");
             }
             else
             {
-                MessageBox.Show("Sorry but that Unit has been created already");
+                MessageBox.Show("Sorry but that Category has been created already");
+                txtName.Text = txtDesc.Text = ("");
+                txtName.Focus();
             }
-            
-
         }
-        public void display()
+
+        private void btnClear_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * from UNITS";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            txtName.Text = txtDesc.Text = ("");
+            txtName.Focus();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -76,9 +86,9 @@ namespace IMS
             id = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Delete from units where id ='" + id + "'";
+            cmd.CommandText = "Delete from Category where id ='" + id + "'";
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Unit Deleted");
+            MessageBox.Show("Category Deleted");
             display();
         }
     }

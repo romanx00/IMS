@@ -125,5 +125,26 @@ namespace IMS
             ap.Show();
 
         }
+
+        private void departmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new_department ad = new new_department();
+            ad.Show();
+
+        }
+
+        private void categoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new_category nc = new new_category();
+                nc.Show();
+
+        }
+
+        private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new_supplier ns = new new_supplier();
+            ns.Show();
+
+        }
     }
 }
