@@ -15,7 +15,7 @@ namespace IMS
 {
     public partial class Login : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\alexsander\source\repos\IMS\IMS\IMS.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=Keybox;Initial Catalog=IMS;Integrated Security=True");
 
         public Login()
         {

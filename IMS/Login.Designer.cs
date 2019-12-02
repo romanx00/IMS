@@ -93,7 +93,7 @@
             this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(132, 20);
             this.txbPassword.TabIndex = 4;
-            this.txbPassword.Text = "Admin";
+            this.txbPassword.Text = "Admin1!";
             this.txbPassword.UseSystemPasswordChar = true;
             this.txbPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 

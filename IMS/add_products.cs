@@ -13,7 +13,7 @@ namespace IMS
 {
     public partial class add_products : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\alexsander\source\repos\IMS\IMS\IMS.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=Keybox;Initial Catalog=IMS;Integrated Security=True");
 
         public add_products()
         {
@@ -106,6 +106,8 @@ namespace IMS
             fill_ddd();
             fill_dds();
             fill_dg();
+            panel2.Visible = false;
+
 
         }
         public void fill_dg()
@@ -123,92 +125,108 @@ namespace IMS
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnRemove_Click(object sender, EventArgs e)
         {
-            panel2.Visible = true;
+            // delete products then fill data grid 
+            int id;
 
-            // clears edit drop down
-            cbEditCat.Items.Clear();
-            cbEditDep.Items.Clear();
-            cbEditSup.Items.Clear();
-
-            int i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
-
-            // drop down for  edit category 
-            
-            SqlCommand cmd1 = con.CreateCommand();
-            cmd1.CommandType = CommandType.Text;
-            cmd1.CommandText = "select * from CATEGORY";
-            cmd1.ExecuteNonQuery();
-            DataTable dt1 = new DataTable();
-            SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
-            da1.Fill(dt1);
-            foreach (DataRow dr1 in dt1.Rows)
-            {
-                cbEditCat.Items.Add(dr1["Name"].ToString());
-            }
-            // drop down for edit department 
-            
-            SqlCommand cmd2 = con.CreateCommand();
-            cmd2.CommandType = CommandType.Text;
-            cmd2.CommandText = "select * from DEPARTMENT";
-            cmd2.ExecuteNonQuery();
-            DataTable dt2 = new DataTable();
-            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
-            da2.Fill(dt2);
-            foreach (DataRow dr2 in dt2.Rows)
-            {
-                cbEditDep.Items.Add(dr2["Name"].ToString());
-            }
-
-            //drop down for Edit Supplier 
-         
-            SqlCommand cmd3 = con.CreateCommand();
-            cmd3.CommandType = CommandType.Text;
-            cmd3.CommandText = "select * from SUPPLIER";
-            cmd3.ExecuteNonQuery();
-            DataTable dt3 = new DataTable();
-            SqlDataAdapter da3 = new SqlDataAdapter(cmd3);
-            da3.Fill(dt3);
-            foreach (DataRow dr3 in dt3.Rows)
-            {
-                cbEditSup.Items.Add(dr3["Name"].ToString());
-            }
-
-
-            // uses int i to select the row from the data grid to be edited 
+            id = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from PRODUCTS name where id="+i+" ";
+            cmd.CommandText = "Delete from Products where id ='" + id + "'";
             cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
-            {
-                txtEditBarcode.Text = dr["Barcode"].ToString();
-                txtEditName.Text = dr["Name"].ToString();
-                txtEditDesc.Text = dr["Desc"].ToString();
-                cbEditCat.SelectedText = dr["Category"].ToString();
-                cbEditDep.SelectedText = dr["Department"].ToString();
-                cbEditSup.SelectedText = dr["Supplier"].ToString();
-            }
-
-            
-
+            MessageBox.Show("Product Deleted");
+            fill_dg();
             
         }
+        /*
+private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+{
+   panel2.Visible = true;
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
+   // clears edit drop down
+   cbEditCat.Items.Clear();
+   cbEditDep.Items.Clear();
+   cbEditSup.Items.Clear();
 
-            int i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+   int i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
 
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "UPDATE PRODUCTS SET Barcode = '"+txtEditBarcode.Text+"', Name = '"+txtEditName.Text+"', Desc = '"+txtEditDesc.Text+"', Category = '"+cbEditCat.SelectedItem.ToString()+"',  Department = '"+cbEditDep.SelectedItem.ToString()+"', Supplier = '"+cbEditSup.SelectedItem.ToString()+"' where id = '"+i+"'";
-            cmd.ExecuteNonQuery();
-            //fill_dg();
-        }
+   // drop down for  edit category 
+
+   SqlCommand cmd1 = con.CreateCommand();
+   cmd1.CommandType = CommandType.Text;
+   cmd1.CommandText = "select * from CATEGORY";
+   cmd1.ExecuteNonQuery();
+   DataTable dt1 = new DataTable();
+   SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
+   da1.Fill(dt1);
+   foreach (DataRow dr1 in dt1.Rows)
+   {
+       cbEditCat.Items.Add(dr1["Name"].ToString());
+   }
+   // drop down for edit department 
+
+   SqlCommand cmd2 = con.CreateCommand();
+   cmd2.CommandType = CommandType.Text;
+   cmd2.CommandText = "select * from DEPARTMENT";
+   cmd2.ExecuteNonQuery();
+   DataTable dt2 = new DataTable();
+   SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+   da2.Fill(dt2);
+   foreach (DataRow dr2 in dt2.Rows)
+   {
+       cbEditDep.Items.Add(dr2["Name"].ToString());
+   }
+
+   //drop down for Edit Supplier 
+
+   SqlCommand cmd3 = con.CreateCommand();
+   cmd3.CommandType = CommandType.Text;
+   cmd3.CommandText = "select * from SUPPLIER";
+   cmd3.ExecuteNonQuery();
+   DataTable dt3 = new DataTable();
+   SqlDataAdapter da3 = new SqlDataAdapter(cmd3);
+   da3.Fill(dt3);
+   foreach (DataRow dr3 in dt3.Rows)
+   {
+       cbEditSup.Items.Add(dr3["Name"].ToString());
+   }
+
+
+   // uses int i to select the row from the data grid to be edited 
+   SqlCommand cmd = con.CreateCommand();
+   cmd.CommandType = CommandType.Text;
+   cmd.CommandText = "select * from PRODUCTS name where id="+i+" ";
+   cmd.ExecuteNonQuery();
+   DataTable dt = new DataTable();
+   SqlDataAdapter da = new SqlDataAdapter(cmd);
+   da.Fill(dt);
+   foreach (DataRow dr in dt.Rows)
+   {
+       txtEditBarcode.Text = dr["Barcode"].ToString();
+       txtEditName.Text = dr["Name"].ToString();
+       txtEditDesc.Text = dr["Desc"].ToString();
+       cbEditCat.SelectedText = dr["Category"].ToString();
+       cbEditDep.SelectedText = dr["Department"].ToString();
+       cbEditSup.SelectedText = dr["Supplier"].ToString();
+   }
+
+
+
+
+}
+
+private void btnEdit_Click(object sender, EventArgs e)
+{
+
+   int i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+
+   SqlCommand cmd = con.CreateCommand();
+   cmd.CommandType = CommandType.Text;
+   cmd.CommandText = "UPDATE PRODUCTS SET Barcode = '"+txtEditBarcode.Text+"', Name = '"+txtEditName.Text+"', Desc = '"+txtEditDesc.Text+"', Category = '"+cbEditCat.SelectedItem.ToString()+"',  Department = '"+cbEditDep.SelectedItem.ToString()+"', Supplier = '"+cbEditSup.SelectedItem.ToString()+"' where id = '"+i+"'";
+   cmd.ExecuteNonQuery();
+   //fill_dg();
+}
+*/
     }
 }

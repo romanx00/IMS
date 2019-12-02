@@ -146,5 +146,10 @@ namespace IMS
             ns.Show();
 
         }
+
+        private void MDIParent1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

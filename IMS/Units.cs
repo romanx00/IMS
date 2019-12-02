@@ -12,7 +12,7 @@ namespace IMS
 {
     public partial class Units : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\alexsander\source\repos\IMS\IMS\IMS.mdf;Integrated Security = True");
+        SqlConnection con = new SqlConnection(@"Data Source=Keybox;Initial Catalog=IMS;Integrated Security=True");
 
         public Units()
         {
