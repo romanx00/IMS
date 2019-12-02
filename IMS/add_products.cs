@@ -13,7 +13,7 @@ namespace IMS
 {
     public partial class add_products : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=Keybox;Initial Catalog=IMS;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=IMS;Integrated Security=True");
 
         public add_products()
         {
