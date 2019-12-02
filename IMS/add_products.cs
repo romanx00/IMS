@@ -206,8 +206,7 @@ namespace IMS
 
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "udate PRODUCTS set Barcode = '"+txtEditBarcode.Text+"', Name = '"+txtEditName.Text+"', Desc = '"+txtEditDesc.Text+"'," +
-                " Category = '"+cbEditCat.SelectedItem.ToString()+"',  Department = '"+cbEditDep.SelectedItem.ToString()+"', Supplier = '"+cbEditSup.SelectedItem.ToString()+"' where id = '"+i+"'";
+            cmd.CommandText = "UPDATE PRODUCTS SET Barcode = '"+txtEditBarcode.Text+"', Name = '"+txtEditName.Text+"', Desc = '"+txtEditDesc.Text+"', Category = '"+cbEditCat.SelectedItem.ToString()+"',  Department = '"+cbEditDep.SelectedItem.ToString()+"', Supplier = '"+cbEditSup.SelectedItem.ToString()+"' where id = '"+i+"'";
             cmd.ExecuteNonQuery();
             //fill_dg();
         }
