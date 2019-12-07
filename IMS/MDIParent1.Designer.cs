@@ -36,9 +36,11 @@
             this.departmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dealerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.purchaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -52,54 +54,63 @@
             this.productsToolStripMenuItem,
             this.departmentToolStripMenuItem,
             this.categoryToolStripMenuItem,
-            this.supplierToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(544, 0);
+            this.supplierToolStripMenuItem,
+            this.dealerToolStripMenuItem,
+            this.purchaseToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(506, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(88, 453);
+            this.menuStrip.Size = new System.Drawing.Size(126, 453);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
             // userToolStripMenuItem
             // 
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.userToolStripMenuItem.Text = "User";
             this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
             // 
             // unitsToolStripMenuItem
             // 
             this.unitsToolStripMenuItem.Name = "unitsToolStripMenuItem";
-            this.unitsToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
+            this.unitsToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.unitsToolStripMenuItem.Text = "Units";
             this.unitsToolStripMenuItem.Click += new System.EventHandler(this.unitsToolStripMenuItem_Click);
             // 
             // productsToolStripMenuItem
             // 
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
-            this.productsToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
+            this.productsToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.productsToolStripMenuItem.Text = "Products ";
             this.productsToolStripMenuItem.Click += new System.EventHandler(this.productsToolStripMenuItem_Click);
             // 
             // departmentToolStripMenuItem
             // 
             this.departmentToolStripMenuItem.Name = "departmentToolStripMenuItem";
-            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
+            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.departmentToolStripMenuItem.Text = "Department";
             this.departmentToolStripMenuItem.Click += new System.EventHandler(this.departmentToolStripMenuItem_Click);
             // 
             // categoryToolStripMenuItem
             // 
             this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
-            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
+            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.categoryToolStripMenuItem.Text = "Category";
             this.categoryToolStripMenuItem.Click += new System.EventHandler(this.categoryToolStripMenuItem_Click);
             // 
             // supplierToolStripMenuItem
             // 
             this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
-            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
+            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.supplierToolStripMenuItem.Text = "Supplier";
             this.supplierToolStripMenuItem.Click += new System.EventHandler(this.supplierToolStripMenuItem_Click);
+            // 
+            // dealerToolStripMenuItem
+            // 
+            this.dealerToolStripMenuItem.Name = "dealerToolStripMenuItem";
+            this.dealerToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.dealerToolStripMenuItem.Text = "Dealer";
+            this.dealerToolStripMenuItem.Click += new System.EventHandler(this.dealerToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
@@ -107,7 +118,7 @@
             this.toolStripStatusLabel});
             this.statusStrip.Location = new System.Drawing.Point(0, 431);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(544, 22);
+            this.statusStrip.Size = new System.Drawing.Size(506, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -116,6 +127,13 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
+            // 
+            // purchaseToolStripMenuItem
+            // 
+            this.purchaseToolStripMenuItem.Name = "purchaseToolStripMenuItem";
+            this.purchaseToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.purchaseToolStripMenuItem.Text = "Purchase";
+            this.purchaseToolStripMenuItem.Click += new System.EventHandler(this.purchaseToolStripMenuItem_Click);
             // 
             // MDIParent1
             // 
@@ -151,6 +169,8 @@
         private System.Windows.Forms.ToolStripMenuItem departmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supplierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dealerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem purchaseToolStripMenuItem;
     }
 }
 

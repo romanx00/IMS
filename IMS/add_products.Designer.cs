@@ -38,6 +38,8 @@
             this.lblDepartment = new System.Windows.Forms.Label();
             this.lblSupplier = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbSup = new System.Windows.Forms.ComboBox();
             this.cbDep = new System.Windows.Forms.ComboBox();
             this.cbCat = new System.Windows.Forms.ComboBox();
@@ -58,6 +60,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtEditDesc = new System.Windows.Forms.TextBox();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.btnEditSelect = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEditPrice = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -98,7 +103,7 @@
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(78, 129);
+            this.lblDesc.Location = new System.Drawing.Point(78, 117);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(32, 13);
             this.lblDesc.TabIndex = 5;
@@ -106,7 +111,7 @@
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(141, 129);
+            this.txtDesc.Location = new System.Drawing.Point(141, 117);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(263, 20);
             this.txtDesc.TabIndex = 6;
@@ -140,6 +145,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtPrice);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.cbSup);
             this.panel1.Controls.Add(this.cbDep);
             this.panel1.Controls.Add(this.cbCat);
@@ -157,6 +164,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1456, 181);
             this.panel1.TabIndex = 0;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(141, 154);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(263, 20);
+            this.txtPrice.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(78, 157);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Price";
             // 
             // cbSup
             // 
@@ -203,6 +226,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.txtEditPrice);
             this.panel2.Controls.Add(this.cbEditSup);
             this.panel2.Controls.Add(this.cbEditDep);
             this.panel2.Controls.Add(this.label6);
@@ -220,7 +245,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(703, 356);
             this.panel2.TabIndex = 2;
-            this.panel2.Visible = false;
             // 
             // cbEditSup
             // 
@@ -264,12 +288,13 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(264, 183);
+            this.btnEdit.Location = new System.Drawing.Point(269, 196);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(113, 23);
             this.btnEdit.TabIndex = 25;
             this.btnEdit.Text = "Edit Product ";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // label5
             // 
@@ -340,11 +365,38 @@
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
+            // btnEditSelect
+            // 
+            this.btnEditSelect.Location = new System.Drawing.Point(887, 625);
+            this.btnEditSelect.Name = "btnEditSelect";
+            this.btnEditSelect.Size = new System.Drawing.Size(113, 23);
+            this.btnEditSelect.TabIndex = 29;
+            this.btnEditSelect.Text = "Edit Product ";
+            this.btnEditSelect.UseVisualStyleBackColor = true;
+            this.btnEditSelect.Click += new System.EventHandler(this.btnEditSelect_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 145);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Price";
+            // 
+            // txtEditPrice
+            // 
+            this.txtEditPrice.Location = new System.Drawing.Point(72, 145);
+            this.txtEditPrice.Name = "txtEditPrice";
+            this.txtEditPrice.Size = new System.Drawing.Size(263, 20);
+            this.txtEditPrice.TabIndex = 30;
+            // 
             // add_products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1526, 704);
+            this.Controls.Add(this.btnEditSelect);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
@@ -393,5 +445,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEditDesc;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnEditSelect;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtEditPrice;
     }
 }

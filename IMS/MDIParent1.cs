@@ -151,5 +151,18 @@ namespace IMS
         {
 
         }
+
+        private void dealerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dealer_info di = new dealer_info();
+            di.Show();
+            
+        }
+
+        private void purchaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            purchase pur = new purchase();
+                pur.Show();
+        }
     }
 }
