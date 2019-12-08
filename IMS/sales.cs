@@ -18,7 +18,7 @@ namespace IMS
         int tot = 0;
 
 
-         public sales()
+        public sales()
         {
             InitializeComponent();
         }
@@ -37,7 +37,7 @@ namespace IMS
             dt.Columns.Add("QTY");
             dt.Columns.Add("Total");
             fill_employee_name();
-            
+
 
 
         }
@@ -56,14 +56,14 @@ namespace IMS
             }
 
         }
-      
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             int stock = 0;
             SqlCommand cmd1 = con.CreateCommand();
             cmd1.CommandType = CommandType.Text;
-            cmd1.CommandText = "SELECT * from stock where product_name = '"+txtProducts.Text+"'";
+            cmd1.CommandText = "SELECT * from stock where product_name = '" + txtProducts.Text + "'";
             cmd1.ExecuteNonQuery();
             DataTable dt1 = new DataTable();
             SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
@@ -72,7 +72,7 @@ namespace IMS
             {
                 stock = Convert.ToInt32(dr1["product_qty"].ToString());
             }
-            if(Convert.ToInt32( txtQty.Text)>stock)
+            if (Convert.ToInt32(txtQty.Text) > stock)
             {
                 MessageBox.Show("Sorry this amount is not available");
             }
@@ -95,7 +95,7 @@ namespace IMS
 
         }
 
-       
+
 
         private void txtProducts_KeyUp(object sender, KeyEventArgs e)
         {
@@ -117,7 +117,7 @@ namespace IMS
 
         private void txtProducts_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==Keys.Down)
+            if (e.KeyCode == Keys.Down)
             {
                 lbCart.Focus();
                 lbCart.SelectedIndex = 0;
@@ -147,9 +147,9 @@ namespace IMS
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-               
+
             }
         }
 
@@ -162,7 +162,7 @@ namespace IMS
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
                 txtPrice.Text = dr["product_price"].ToString();
 
@@ -176,10 +176,71 @@ namespace IMS
             {
                 txtTotal.Text = Convert.ToString(Convert.ToInt32(txtQty.Text) * Convert.ToInt32(txtPrice.Text));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tot = 0;
+                dt.Rows.RemoveAt(Convert.ToInt32(dataGridView1.CurrentCell.RowIndex.ToString()));
+                foreach (DataRow dr1 in dt.Rows)
+
+                {
+                    tot = tot + Convert.ToInt32(dr1["total"].ToString());
+                    lbltotalAmount.Text = tot.ToString();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void btnSavePrint_Click(object sender, EventArgs e)
+        {
+            string orderid = "";
+            SqlCommand cmd1 = con.CreateCommand();
+            cmd1.CommandType = CommandType.Text;
+            cmd1.CommandText = "insert into order_user values('" + cbUsers.Text + "', '" + dateTimePicker1.Value.ToString("dd-MM-yyyy") + "')";
+            cmd1.ExecuteNonQuery();
+
+            SqlCommand cmd2 = con.CreateCommand();
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = "select top 1 * from order_user order by id desc";
+            cmd2.ExecuteNonQuery();
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+            da2.Fill(dt2);
+            foreach (DataRow dr2 in dt2.Rows)
+            {
+                orderid = dr2["id"].ToString();
+            }
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                SqlCommand cmd3 = con.CreateCommand();
+                cmd3.CommandType = CommandType.Text;
+                cmd3.CommandText = "insert into order_itemS values('" + orderid.ToString() + "','" + dr["product"].ToString() + "','" + dr["qty"].ToString() + "','" + dr["total"].ToString() + "')";
+                cmd3.ExecuteNonQuery();
+            }
+
+            txtPrice.Text = "";
+            txtProducts.Text = "";
+            txtQty.Text = "";
+            txtTotal.Text = "";
+            lbltotalAmount.Text = "";
+            dt.Clear();
+            dataGridView1.DataSource = dt;
+
+            MessageBox.Show("Sale added!");
+
+
         }
     }
 }
