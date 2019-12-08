@@ -119,15 +119,52 @@ namespace IMS
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {// having issues sending data to db gives error 
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            //(product_name, product_qty, product_price, prodcut_total, purchase_date, purchase_party_name)
-            
-            cmd.CommandText = "Insert into Purchase  values ('" + cbProductName.Text + "','" + txtQuantity.Text + "','" + txtQuantity.Text + "','" + lblPurTotal.Text + "','" + dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") + "','" + cbEmpName.Text + "')";
-            cmd.ExecuteNonQuery();
-           
-            MessageBox.Show("New purchase added!");
+        {
+            int i;
+
+            SqlCommand cmd1 = con.CreateCommand();
+            cmd1.CommandType = CommandType.Text;
+            cmd1.CommandText = "SELECT * from stock where product_name = '" + cbProductName.Text + "'";
+            cmd1.ExecuteNonQuery();
+            DataTable dt1 = new DataTable();
+            SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
+            da1.Fill(dt1);
+            i = Convert.ToInt32(dt1.Rows.Count.ToString());
+            if (i==0)
+            {
+                // if not in stock table adds into purchase and stock tables
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Insert into Purchase  values ('" + cbProductName.Text + "','" + txtQuantity.Text + "','" + txtQuantity.Text + "','" + lblPurTotal.Text + "','" + dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") + "','" + cbEmpName.Text + "')";
+                cmd.ExecuteNonQuery();
+
+                SqlCommand cmd3 = con.CreateCommand();
+                cmd3.CommandType = CommandType.Text;
+                cmd3.CommandText = "Insert into Stock  values ('" + cbProductName.Text + "','" + txtQuantity.Text + "','" + cbDepartment.Text + "')";
+                cmd3.ExecuteNonQuery();
+
+                MessageBox.Show("Item purchase added to stock!");
+            }
+            else
+            {
+                //if allready in stock tables adds to just purchase order 
+                SqlCommand cmd2 = con.CreateCommand();
+                cmd2.CommandType = CommandType.Text;
+                cmd2.CommandText = "Insert into Purchase  values ('" + cbProductName.Text + "','" + txtQuantity.Text + "','" + lblPriceSelect.Text + "','" + lblPurTotal.Text + "','" + dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") + "','" + cbEmpName.Text + "')";
+                cmd2.ExecuteNonQuery();
+                // updates the stock table 
+                SqlCommand cmd3 = con.CreateCommand();
+                cmd3.CommandType = CommandType.Text;
+                cmd3.CommandText = "update stock set product_qty = product_qty +  " + txtQuantity.Text + " where product_name ='" + cbProductName.Text + "' ";
+                cmd3.ExecuteNonQuery();
+
+                MessageBox.Show("Item purchase added to stock!");
+            }
+
+
+
+
+          
         }
 
         private void btnClear_Click(object sender, EventArgs e)

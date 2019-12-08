@@ -164,5 +164,13 @@ namespace IMS
             purchase pur = new purchase();
                 pur.Show();
         }
+
+        private void salesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sales sal = new sales();
+            sal.Show();
+
+
+        }
     }
 }
