@@ -108,7 +108,6 @@ namespace IMS
         {
             new_user nu = new new_user();
             nu.Show();
-
         
         }
 
@@ -150,6 +149,11 @@ namespace IMS
         private void MDIParent1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void closeApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

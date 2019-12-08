@@ -13,7 +13,7 @@ namespace IMS
 {
     public partial class new_department : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=IMS;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\vhgia\Desktop\ISDS_454\IMS.mdf;Integrated Security=True;Connect Timeout=30");
 
         public new_department()
         {
