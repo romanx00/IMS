@@ -123,7 +123,8 @@ namespace IMS
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             //(product_name, product_qty, product_price, prodcut_total, purchase_date, purchase_party_name)
-            cmd.CommandText = "Insert into Purchase  values ('" + cbProductName.Text + "','" + txtQuantity.Text + "','" + lblPriceSelect.Text + "','" + lblPurTotal.Text + "''" + dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") + "','" + cbEmpName.Text + "')";
+            
+            cmd.CommandText = "Insert into Purchase  values ('" + cbProductName.Text + "','" + txtQuantity.Text + "','" + txtQuantity.Text + "','" + lblPurTotal.Text + "','" + dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") + "','" + cbEmpName.Text + "')";
             cmd.ExecuteNonQuery();
            
             MessageBox.Show("New purchase added!");
@@ -131,7 +132,8 @@ namespace IMS
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            MessageBox.Show( cbProductName.Text+""+ txtQuantity.Text+""+ lblPriceSelect.Text+""+ lblPurTotal.Text+dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss")+""+ cbEmpName.Text);
+            
+           
            
         }
     }
