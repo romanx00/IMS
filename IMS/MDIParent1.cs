@@ -172,5 +172,11 @@ namespace IMS
 
 
         }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            purchase_report rep = new purchase_report();
+            rep.Show();
+        }
     }
 }

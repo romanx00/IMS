@@ -224,10 +224,25 @@ namespace IMS
 
             foreach (DataRow dr in dt.Rows)
             {
+                int qty = 0;
+                string pname = "";
+
+
                 SqlCommand cmd3 = con.CreateCommand();
                 cmd3.CommandType = CommandType.Text;
                 cmd3.CommandText = "insert into order_itemS values('" + orderid.ToString() + "','" + dr["product"].ToString() + "','" + dr["qty"].ToString() + "','" + dr["total"].ToString() + "')";
                 cmd3.ExecuteNonQuery();
+
+
+                qty = Convert.ToInt32(dr["qty"].ToString());
+                pname = dr["product"].ToString();
+
+
+                SqlCommand cmd6 = con.CreateCommand();
+                cmd6.CommandType = CommandType.Text;
+                cmd6.CommandText = "update stock set product_qty=product_qty-" + qty + " where product_name='" + pname.ToString() + "'";
+                cmd6.ExecuteNonQuery();
+
             }
 
             txtPrice.Text = "";
