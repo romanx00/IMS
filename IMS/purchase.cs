@@ -31,6 +31,7 @@ namespace IMS
             fill_product_name();
             fill_employee_name();
             fill_Department_name();
+            cbProductName.Focus();
            
 
         }
@@ -96,6 +97,42 @@ namespace IMS
 
 
             }
+        }
+
+        
+
+        private void txtQuantity_Leave_1(object sender, EventArgs e)
+        {
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * from products where name = '" + cbProductName.Text + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                lblPurTotal.Text = Convert.ToString(Convert.ToInt32(txtQuantity.Text) * Convert.ToInt32(dr["Price"]));
+
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {// having issues sending data to db gives error 
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            //(product_name, product_qty, product_price, prodcut_total, purchase_date, purchase_party_name)
+            cmd.CommandText = "Insert into Purchase  values ('" + cbProductName.Text + "','" + txtQuantity.Text + "','" + lblPriceSelect.Text + "','" + lblPurTotal.Text + "''" + dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") + "','" + cbEmpName.Text + "')";
+            cmd.ExecuteNonQuery();
+           
+            MessageBox.Show("New purchase added!");
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show( cbProductName.Text+""+ txtQuantity.Text+""+ lblPriceSelect.Text+""+ lblPurTotal.Text+dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss")+""+ cbEmpName.Text);
+           
         }
     }
 }

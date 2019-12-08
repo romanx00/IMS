@@ -29,29 +29,30 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPurTotal = new System.Windows.Forms.Label();
+            this.lblPriceSelect = new System.Windows.Forms.Label();
+            this.lblCategorySelection = new System.Windows.Forms.Label();
+            this.cbDepartment = new System.Windows.Forms.ComboBox();
+            this.cbEmpName = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cbProductName = new System.Windows.Forms.ComboBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lbltotal = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblProductQty = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.lblProductName = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.cbProductName = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cbEmpName = new System.Windows.Forms.ComboBox();
-            this.cbDepartment = new System.Windows.Forms.ComboBox();
-            this.lblCategorySelection = new System.Windows.Forms.Label();
-            this.lblPriceSelect = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblPurTotal);
             this.panel1.Controls.Add(this.lblPriceSelect);
             this.panel1.Controls.Add(this.lblCategorySelection);
             this.panel1.Controls.Add(this.cbDepartment);
@@ -65,7 +66,6 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.lblDate);
             this.panel1.Controls.Add(this.lbltotal);
-            this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.lblPrice);
             this.panel1.Controls.Add(this.lblProductQty);
             this.panel1.Controls.Add(this.txtQuantity);
@@ -74,6 +74,85 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(387, 437);
             this.panel1.TabIndex = 0;
+            // 
+            // lblPurTotal
+            // 
+            this.lblPurTotal.AutoSize = true;
+            this.lblPurTotal.Location = new System.Drawing.Point(191, 132);
+            this.lblPurTotal.Name = "lblPurTotal";
+            this.lblPurTotal.Size = new System.Drawing.Size(10, 13);
+            this.lblPurTotal.TabIndex = 45;
+            this.lblPurTotal.Text = ".";
+            // 
+            // lblPriceSelect
+            // 
+            this.lblPriceSelect.AutoSize = true;
+            this.lblPriceSelect.Location = new System.Drawing.Point(191, 94);
+            this.lblPriceSelect.Name = "lblPriceSelect";
+            this.lblPriceSelect.Size = new System.Drawing.Size(10, 13);
+            this.lblPriceSelect.TabIndex = 44;
+            this.lblPriceSelect.Text = ".";
+            // 
+            // lblCategorySelection
+            // 
+            this.lblCategorySelection.AutoSize = true;
+            this.lblCategorySelection.Location = new System.Drawing.Point(191, 284);
+            this.lblCategorySelection.Name = "lblCategorySelection";
+            this.lblCategorySelection.Size = new System.Drawing.Size(10, 13);
+            this.lblCategorySelection.TabIndex = 43;
+            this.lblCategorySelection.Text = ".";
+            // 
+            // cbDepartment
+            // 
+            this.cbDepartment.FormattingEnabled = true;
+            this.cbDepartment.Location = new System.Drawing.Point(106, 238);
+            this.cbDepartment.Name = "cbDepartment";
+            this.cbDepartment.Size = new System.Drawing.Size(260, 21);
+            this.cbDepartment.TabIndex = 42;
+            // 
+            // cbEmpName
+            // 
+            this.cbEmpName.FormattingEnabled = true;
+            this.cbEmpName.Location = new System.Drawing.Point(106, 204);
+            this.cbEmpName.Name = "cbEmpName";
+            this.cbEmpName.Size = new System.Drawing.Size(260, 21);
+            this.cbEmpName.TabIndex = 41;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(106, 169);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(260, 20);
+            this.dateTimePicker1.TabIndex = 40;
+            // 
+            // cbProductName
+            // 
+            this.cbProductName.FormattingEnabled = true;
+            this.cbProductName.Location = new System.Drawing.Point(106, 17);
+            this.cbProductName.Name = "cbProductName";
+            this.cbProductName.Size = new System.Drawing.Size(260, 21);
+            this.cbProductName.TabIndex = 38;
+            this.cbProductName.SelectedIndexChanged += new System.EventHandler(this.cbProductName_SelectedIndexChanged);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(149, 380);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(156, 23);
+            this.btnClear.TabIndex = 37;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(149, 336);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 23);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Purchase";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -120,13 +199,6 @@
             this.lbltotal.TabIndex = 25;
             this.lbltotal.Text = "Purchase Total";
             // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(106, 132);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(260, 20);
-            this.txtTotal.TabIndex = 24;
-            // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
@@ -151,6 +223,7 @@
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(260, 20);
             this.txtQuantity.TabIndex = 20;
+            this.txtQuantity.Leave += new System.EventHandler(this.txtQuantity_Leave_1);
             // 
             // lblProductName
             // 
@@ -160,74 +233,6 @@
             this.lblProductName.Size = new System.Drawing.Size(75, 13);
             this.lblProductName.TabIndex = 19;
             this.lblProductName.Text = "Product Name";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(149, 336);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 23);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Purchase";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(149, 380);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(156, 23);
-            this.btnClear.TabIndex = 37;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // cbProductName
-            // 
-            this.cbProductName.FormattingEnabled = true;
-            this.cbProductName.Location = new System.Drawing.Point(106, 17);
-            this.cbProductName.Name = "cbProductName";
-            this.cbProductName.Size = new System.Drawing.Size(260, 21);
-            this.cbProductName.TabIndex = 38;
-            this.cbProductName.SelectedIndexChanged += new System.EventHandler(this.cbProductName_SelectedIndexChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 169);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(260, 20);
-            this.dateTimePicker1.TabIndex = 40;
-            // 
-            // cbEmpName
-            // 
-            this.cbEmpName.FormattingEnabled = true;
-            this.cbEmpName.Location = new System.Drawing.Point(106, 204);
-            this.cbEmpName.Name = "cbEmpName";
-            this.cbEmpName.Size = new System.Drawing.Size(260, 21);
-            this.cbEmpName.TabIndex = 41;
-            // 
-            // cbDepartment
-            // 
-            this.cbDepartment.FormattingEnabled = true;
-            this.cbDepartment.Location = new System.Drawing.Point(106, 238);
-            this.cbDepartment.Name = "cbDepartment";
-            this.cbDepartment.Size = new System.Drawing.Size(260, 21);
-            this.cbDepartment.TabIndex = 42;
-            // 
-            // lblCategorySelection
-            // 
-            this.lblCategorySelection.AutoSize = true;
-            this.lblCategorySelection.Location = new System.Drawing.Point(191, 284);
-            this.lblCategorySelection.Name = "lblCategorySelection";
-            this.lblCategorySelection.Size = new System.Drawing.Size(10, 13);
-            this.lblCategorySelection.TabIndex = 43;
-            this.lblCategorySelection.Text = ".";
-            // 
-            // lblPriceSelect
-            // 
-            this.lblPriceSelect.AutoSize = true;
-            this.lblPriceSelect.Location = new System.Drawing.Point(191, 94);
-            this.lblPriceSelect.Name = "lblPriceSelect";
-            this.lblPriceSelect.Size = new System.Drawing.Size(10, 13);
-            this.lblPriceSelect.TabIndex = 44;
-            this.lblPriceSelect.Text = ".";
             // 
             // purchase
             // 
@@ -252,7 +257,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lbltotal;
-        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblProductQty;
         private System.Windows.Forms.TextBox txtQuantity;
@@ -265,5 +269,6 @@
         private System.Windows.Forms.ComboBox cbDepartment;
         private System.Windows.Forms.Label lblCategorySelection;
         private System.Windows.Forms.Label lblPriceSelect;
+        private System.Windows.Forms.Label lblPurTotal;
     }
 }
