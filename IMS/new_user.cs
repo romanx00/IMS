@@ -60,6 +60,8 @@ namespace IMS
                 if (!int.TryParse(txtContact.Text,out parsedValue))
                 {
                     MessageBox.Show("Contact Should Contain Only Number");
+                    txtContact.Clear();
+                    txtContact.Focus();
                 }
                 else if (i == 0)
                 {
@@ -146,7 +148,15 @@ namespace IMS
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text != "" && txtFName.Text !="" && txtLName.Text != "" &&
+            int parsedValue;
+
+            if(!int.TryParse(txtContact.Text, out parsedValue))
+            {
+                MessageBox.Show("Contact Should Contain Number Only");
+                txtContact.Clear();
+                txtContact.Focus();
+            }
+             else if (txtUsername.Text != "" && txtFName.Text !="" && txtLName.Text != "" &&
                 txtPassword.Text != "" && txtEmail.Text !="" && txtContact.Text != "")
             {
                 con.Open();
