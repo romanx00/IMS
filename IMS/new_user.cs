@@ -10,6 +10,13 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 
+/// <summary>
+/// 
+/// ISDS 454 Team 2 Project
+/// Inventory Management System v1.0
+/// ------------------------------
+/// new user form is completed
+/// </summary>
 
 namespace IMS
 {
