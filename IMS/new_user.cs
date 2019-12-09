@@ -35,6 +35,7 @@ namespace IMS
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
+            con.Open();
             int i = 0;
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -55,7 +56,12 @@ namespace IMS
             }
             else
             {
-                if (i == 0)
+                int parsedValue;
+                if (!int.TryParse(txtContact.Text,out parsedValue))
+                {
+                    MessageBox.Show("Contact Should Contain Only Number");
+                }
+                else if (i == 0)
                 {
                     SqlCommand cmd1 = con.CreateCommand();
                     cmd1.CommandType = CommandType.Text;
