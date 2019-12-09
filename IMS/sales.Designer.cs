@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sales));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -69,6 +70,7 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
+            this.lblDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDate.Location = new System.Drawing.Point(371, 18);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(30, 13);
@@ -93,6 +95,7 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
+            this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblUser.Location = new System.Drawing.Point(73, 18);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(55, 13);
@@ -129,6 +132,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
+            this.lblTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTotal.Location = new System.Drawing.Point(539, 14);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(31, 13);
@@ -145,6 +149,7 @@
             // lblCart
             // 
             this.lblCart.AutoSize = true;
+            this.lblCart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCart.Location = new System.Drawing.Point(58, 46);
             this.lblCart.Name = "lblCart";
             this.lblCart.Size = new System.Drawing.Size(37, 13);
@@ -154,6 +159,7 @@
             // lblQty
             // 
             this.lblQty.AutoSize = true;
+            this.lblQty.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblQty.Location = new System.Drawing.Point(293, 63);
             this.lblQty.Name = "lblQty";
             this.lblQty.Size = new System.Drawing.Size(23, 13);
@@ -163,6 +169,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
+            this.lblPrice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPrice.Location = new System.Drawing.Point(293, 14);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(31, 13);
@@ -172,6 +179,7 @@
             // lblProducts
             // 
             this.lblProducts.AutoSize = true;
+            this.lblProducts.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblProducts.Location = new System.Drawing.Point(58, 13);
             this.lblProducts.Name = "lblProducts";
             this.lblProducts.Size = new System.Drawing.Size(49, 13);
@@ -246,6 +254,7 @@
             // lblFTotal
             // 
             this.lblFTotal.AutoSize = true;
+            this.lblFTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblFTotal.Location = new System.Drawing.Point(673, 287);
             this.lblFTotal.Name = "lblFTotal";
             this.lblFTotal.Size = new System.Drawing.Size(31, 13);
@@ -255,6 +264,7 @@
             // lbltotalAmount
             // 
             this.lbltotalAmount.AutoSize = true;
+            this.lbltotalAmount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbltotalAmount.Location = new System.Drawing.Point(733, 287);
             this.lbltotalAmount.Name = "lbltotalAmount";
             this.lbltotalAmount.Size = new System.Drawing.Size(13, 13);
@@ -273,8 +283,10 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "sales";
-            this.Text = "sales";
+            this.Text = "Sales";
             this.Load += new System.EventHandler(this.sales_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

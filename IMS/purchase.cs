@@ -32,7 +32,8 @@ namespace IMS
             fill_employee_name();
             fill_Department_name();
             cbProductName.Focus();
-           
+            this.BackColor = Color.FromArgb(56, 111, 178);
+
 
         }
 

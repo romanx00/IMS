@@ -28,6 +28,7 @@ namespace IMS
 
             }
             con.Open();
+            this.BackColor = Color.FromArgb(56, 111, 178);
             SqlCommand cmd1 = con.CreateCommand();
             cmd1.CommandType = CommandType.Text;
             cmd1.CommandText = "SELECT * from stock ";
@@ -48,6 +49,11 @@ namespace IMS
             SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
             da1.Fill(dt1);
             dataGridView1.DataSource = (dt1);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

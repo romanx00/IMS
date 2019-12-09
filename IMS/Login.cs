@@ -90,6 +90,7 @@ namespace IMS
 
             }
             con.Open();
+            this.BackColor = Color.FromArgb(56, 111, 178);
         }
 
     }

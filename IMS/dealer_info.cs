@@ -64,6 +64,7 @@ namespace IMS
             }
             con.Open();
             display();
+            this.BackColor = Color.FromArgb(56, 111, 178);
         }
         public void display()
             // sets data grid to dealer info also shown as dg

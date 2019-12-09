@@ -37,6 +37,7 @@ namespace IMS
             dt.Columns.Add("QTY");
             dt.Columns.Add("Total");
             fill_employee_name();
+            this.BackColor = Color.FromArgb(56, 111, 178);
 
 
 

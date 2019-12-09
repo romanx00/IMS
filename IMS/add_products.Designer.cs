@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(add_products));
             this.lblBarccode = new System.Windows.Forms.Label();
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
@@ -46,6 +47,8 @@
             this.btnProduct = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEditPrice = new System.Windows.Forms.TextBox();
             this.cbEditSup = new System.Windows.Forms.ComboBox();
             this.cbEditDep = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,8 +64,6 @@
             this.txtEditDesc = new System.Windows.Forms.TextBox();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnEditSelect = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtEditPrice = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -71,6 +72,7 @@
             // lblBarccode
             // 
             this.lblBarccode.AutoSize = true;
+            this.lblBarccode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblBarccode.Location = new System.Drawing.Point(78, 38);
             this.lblBarccode.Name = "lblBarccode";
             this.lblBarccode.Size = new System.Drawing.Size(47, 13);
@@ -87,6 +89,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblName.Location = new System.Drawing.Point(78, 81);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
@@ -103,6 +106,7 @@
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
+            this.lblDesc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDesc.Location = new System.Drawing.Point(78, 117);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(32, 13);
@@ -119,6 +123,7 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
+            this.lblCategory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCategory.Location = new System.Drawing.Point(452, 38);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(49, 13);
@@ -128,6 +133,7 @@
             // lblDepartment
             // 
             this.lblDepartment.AutoSize = true;
+            this.lblDepartment.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDepartment.Location = new System.Drawing.Point(452, 82);
             this.lblDepartment.Name = "lblDepartment";
             this.lblDepartment.Size = new System.Drawing.Size(62, 13);
@@ -137,6 +143,7 @@
             // lblSupplier
             // 
             this.lblSupplier.AutoSize = true;
+            this.lblSupplier.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblSupplier.Location = new System.Drawing.Point(452, 125);
             this.lblSupplier.Name = "lblSupplier";
             this.lblSupplier.Size = new System.Drawing.Size(45, 13);
@@ -175,6 +182,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(78, 157);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 13);
@@ -246,6 +254,23 @@
             this.panel2.Size = new System.Drawing.Size(703, 356);
             this.panel2.TabIndex = 2;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(9, 145);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Price";
+            // 
+            // txtEditPrice
+            // 
+            this.txtEditPrice.Location = new System.Drawing.Point(72, 145);
+            this.txtEditPrice.Name = "txtEditPrice";
+            this.txtEditPrice.Size = new System.Drawing.Size(263, 20);
+            this.txtEditPrice.TabIndex = 30;
+            // 
             // cbEditSup
             // 
             this.cbEditSup.FormattingEnabled = true;
@@ -265,6 +290,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(9, 22);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
@@ -299,6 +325,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(9, 59);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
@@ -308,6 +335,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(346, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
@@ -324,6 +352,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(346, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
@@ -333,6 +362,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(9, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
@@ -342,6 +372,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(346, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
@@ -375,22 +406,6 @@
             this.btnEditSelect.UseVisualStyleBackColor = true;
             this.btnEditSelect.Click += new System.EventHandler(this.btnEditSelect_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 145);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 13);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Price";
-            // 
-            // txtEditPrice
-            // 
-            this.txtEditPrice.Location = new System.Drawing.Point(72, 145);
-            this.txtEditPrice.Name = "txtEditPrice";
-            this.txtEditPrice.Size = new System.Drawing.Size(263, 20);
-            this.txtEditPrice.TabIndex = 30;
-            // 
             // add_products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,8 +416,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "add_products";
-            this.Text = "add_products";
+            this.Text = "Add Products";
             this.Load += new System.EventHandler(this.add_products_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

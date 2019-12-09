@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(new_user));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblContact = new System.Windows.Forms.Label();
             this.txtContact = new System.Windows.Forms.TextBox();
@@ -74,6 +75,7 @@
             // lblContact
             // 
             this.lblContact.AutoSize = true;
+            this.lblContact.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblContact.Location = new System.Drawing.Point(66, 255);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(47, 13);
@@ -90,6 +92,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblEmail.Location = new System.Drawing.Point(66, 215);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
@@ -106,6 +109,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPassword.Location = new System.Drawing.Point(66, 170);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
@@ -122,6 +126,7 @@
             // lblLName
             // 
             this.lblLName.AutoSize = true;
+            this.lblLName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblLName.Location = new System.Drawing.Point(66, 131);
             this.lblLName.Name = "lblLName";
             this.lblLName.Size = new System.Drawing.Size(58, 13);
@@ -138,6 +143,7 @@
             // lblFName
             // 
             this.lblFName.AutoSize = true;
+            this.lblFName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblFName.Location = new System.Drawing.Point(66, 91);
             this.lblFName.Name = "lblFName";
             this.lblFName.Size = new System.Drawing.Size(57, 13);
@@ -174,6 +180,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
+            this.lblUsername.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblUsername.Location = new System.Drawing.Point(66, 46);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(55, 13);
@@ -215,8 +222,9 @@
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "new_user";
-            this.Text = "new_user";
+            this.Text = "New User";
             this.Load += new System.EventHandler(this.new_user_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

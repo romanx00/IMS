@@ -108,21 +108,22 @@ namespace IMS
         {
             new_user nu = new new_user();
             nu.Show();
+            this.BackColor = Color.FromArgb(56, 111, 178);
 
-        
         }
 
         private void unitsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Units un = new Units();
             un.Show();
-
+            this.BackColor = Color.FromArgb(56, 111, 178);
         }
 
         private void productsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             add_products ap = new add_products();
             ap.Show();
+            this.BackColor = Color.FromArgb(56, 111, 178);
 
         }
 
@@ -130,46 +131,47 @@ namespace IMS
         {
             new_department ad = new new_department();
             ad.Show();
-
+            this.BackColor = Color.FromArgb(56, 111, 178);
         }
 
         private void categoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new_category nc = new new_category();
                 nc.Show();
-
+            this.BackColor = Color.FromArgb(56, 111, 178);
         }
 
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new_supplier ns = new new_supplier();
             ns.Show();
-
+            this.BackColor = Color.FromArgb(56, 111, 178);
         }
 
         private void MDIParent1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void dealerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dealer_info di = new dealer_info();
             di.Show();
-            
+            this.BackColor = Color.FromArgb(56, 111, 178);
         }
 
         private void purchaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             purchase pur = new purchase();
                 pur.Show();
+            this.BackColor = Color.FromArgb(56, 111, 178);
         }
 
         private void salesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sales sal = new sales();
             sal.Show();
-
+            this.BackColor = Color.FromArgb(56, 111, 178);
 
         }
 
@@ -177,12 +179,24 @@ namespace IMS
         {
             purchase_report rep = new purchase_report();
             rep.Show();
+            this.BackColor = Color.FromArgb(56, 111, 178);
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Search ser = new Search();
             ser.Show();
+            this.BackColor = Color.FromArgb(56, 111, 178);
+        }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void MDIParent1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -178,6 +178,7 @@ namespace IMS
             fill_dds();
             fill_dg();
             panel2.Visible = false;
+            this.BackColor = Color.FromArgb(56, 111, 178);
 
 
         }

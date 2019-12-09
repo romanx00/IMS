@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(new_category));
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -73,6 +74,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblName.Location = new System.Drawing.Point(139, 74);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
@@ -82,6 +84,7 @@
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
+            this.lblDesc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDesc.Location = new System.Drawing.Point(139, 125);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(32, 13);
@@ -132,8 +135,9 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "new_category";
-            this.Text = "new_category";
+            this.Text = "New Category";
             this.Load += new System.EventHandler(this.new_category_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

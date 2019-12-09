@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(new_department));
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblName.Location = new System.Drawing.Point(172, 48);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
@@ -86,6 +88,7 @@
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
+            this.lblDesc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDesc.Location = new System.Drawing.Point(172, 109);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(32, 13);
@@ -132,8 +135,9 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "new_department";
-            this.Text = "new_department";
+            this.Text = "New Department";
             this.Load += new System.EventHandler(this.new_department_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

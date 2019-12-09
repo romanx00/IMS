@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(purchase));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblPurTotal = new System.Windows.Forms.Label();
             this.lblPriceSelect = new System.Windows.Forms.Label();
@@ -70,7 +71,7 @@
             this.panel1.Controls.Add(this.lblProductQty);
             this.panel1.Controls.Add(this.txtQuantity);
             this.panel1.Controls.Add(this.lblProductName);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(220, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(387, 437);
             this.panel1.TabIndex = 0;
@@ -157,6 +158,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(15, 284);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
@@ -166,6 +168,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(15, 246);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 13);
@@ -175,6 +178,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(15, 207);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 13);
@@ -184,6 +188,7 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
+            this.lblDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDate.Location = new System.Drawing.Point(15, 169);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(78, 13);
@@ -193,6 +198,7 @@
             // lbltotal
             // 
             this.lbltotal.AutoSize = true;
+            this.lbltotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbltotal.Location = new System.Drawing.Point(15, 132);
             this.lbltotal.Name = "lbltotal";
             this.lbltotal.Size = new System.Drawing.Size(79, 13);
@@ -202,6 +208,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
+            this.lblPrice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPrice.Location = new System.Drawing.Point(15, 94);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(71, 13);
@@ -211,6 +218,7 @@
             // lblProductQty
             // 
             this.lblProductQty.AutoSize = true;
+            this.lblProductQty.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblProductQty.Location = new System.Drawing.Point(15, 55);
             this.lblProductQty.Name = "lblProductQty";
             this.lblProductQty.Size = new System.Drawing.Size(46, 13);
@@ -228,6 +236,7 @@
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
+            this.lblProductName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblProductName.Location = new System.Drawing.Point(15, 17);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Size = new System.Drawing.Size(75, 13);
@@ -238,10 +247,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 494);
+            this.ClientSize = new System.Drawing.Size(834, 494);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "purchase";
-            this.Text = "purchase";
+            this.Text = "Purchase";
             this.Load += new System.EventHandler(this.purchase_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

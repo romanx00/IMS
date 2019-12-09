@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dealer_info));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDealerAdd = new System.Windows.Forms.Button();
@@ -76,6 +77,7 @@
             // 
             // btnClear
             // 
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnClear.Location = new System.Drawing.Point(255, 250);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(93, 23);
@@ -86,6 +88,7 @@
             // 
             // btnDealerAdd
             // 
+            this.btnDealerAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDealerAdd.Location = new System.Drawing.Point(255, 210);
             this.btnDealerAdd.Name = "btnDealerAdd";
             this.btnDealerAdd.Size = new System.Drawing.Size(93, 23);
@@ -104,6 +107,7 @@
             // lblDealerDesc
             // 
             this.lblDealerDesc.AutoSize = true;
+            this.lblDealerDesc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDealerDesc.Location = new System.Drawing.Point(61, 155);
             this.lblDealerDesc.Name = "lblDealerDesc";
             this.lblDealerDesc.Size = new System.Drawing.Size(69, 13);
@@ -120,6 +124,7 @@
             // lblDealerContact
             // 
             this.lblDealerContact.AutoSize = true;
+            this.lblDealerContact.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDealerContact.Location = new System.Drawing.Point(61, 120);
             this.lblDealerContact.Name = "lblDealerContact";
             this.lblDealerContact.Size = new System.Drawing.Size(81, 13);
@@ -136,6 +141,7 @@
             // lblCompanyName
             // 
             this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCompanyName.Location = new System.Drawing.Point(61, 85);
             this.lblCompanyName.Name = "lblCompanyName";
             this.lblCompanyName.Size = new System.Drawing.Size(82, 13);
@@ -152,6 +158,7 @@
             // lblDealerName
             // 
             this.lblDealerName.AutoSize = true;
+            this.lblDealerName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDealerName.Location = new System.Drawing.Point(61, 50);
             this.lblDealerName.Name = "lblDealerName";
             this.lblDealerName.Size = new System.Drawing.Size(69, 13);
@@ -169,6 +176,7 @@
             // 
             // btnDeleteDealer
             // 
+            this.btnDeleteDealer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDeleteDealer.Location = new System.Drawing.Point(852, 415);
             this.btnDeleteDealer.Name = "btnDeleteDealer";
             this.btnDeleteDealer.Size = new System.Drawing.Size(93, 23);
@@ -179,6 +187,7 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnUpdate.Location = new System.Drawing.Point(661, 415);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(93, 23);
@@ -206,6 +215,7 @@
             // 
             // btnUpdateDealer
             // 
+            this.btnUpdateDealer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnUpdateDealer.Location = new System.Drawing.Point(255, 210);
             this.btnUpdateDealer.Name = "btnUpdateDealer";
             this.btnUpdateDealer.Size = new System.Drawing.Size(93, 23);
@@ -224,6 +234,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(61, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 13);
@@ -240,6 +251,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(61, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 13);
@@ -256,6 +268,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(61, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 13);
@@ -272,6 +285,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(61, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 13);
@@ -288,8 +302,10 @@
             this.Controls.Add(this.btnDeleteDealer);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "dealer_info";
-            this.Text = "dealer_info";
+            this.Text = "Dealer Info";
             this.Load += new System.EventHandler(this.dealer_info_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

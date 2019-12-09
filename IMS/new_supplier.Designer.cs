@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(new_supplier));
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -51,6 +52,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblName.Location = new System.Drawing.Point(100, 48);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
@@ -74,6 +76,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
+            this.lblPhone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPhone.Location = new System.Drawing.Point(100, 87);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(38, 13);
@@ -90,6 +93,7 @@
             // lblCity
             // 
             this.lblCity.AutoSize = true;
+            this.lblCity.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCity.Location = new System.Drawing.Point(390, 45);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(24, 13);
@@ -106,6 +110,7 @@
             // lblStreet
             // 
             this.lblStreet.AutoSize = true;
+            this.lblStreet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblStreet.Location = new System.Drawing.Point(100, 124);
             this.lblStreet.Name = "lblStreet";
             this.lblStreet.Size = new System.Drawing.Size(35, 13);
@@ -122,6 +127,7 @@
             // lblZip
             // 
             this.lblZip.AutoSize = true;
+            this.lblZip.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblZip.Location = new System.Drawing.Point(390, 119);
             this.lblZip.Name = "lblZip";
             this.lblZip.Size = new System.Drawing.Size(22, 13);
@@ -138,6 +144,7 @@
             // lblState
             // 
             this.lblState.AutoSize = true;
+            this.lblState.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblState.Location = new System.Drawing.Point(390, 80);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(32, 13);
@@ -212,8 +219,9 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "new_supplier";
-            this.Text = "new_supplier";
+            this.Text = "New Supplier";
             this.Load += new System.EventHandler(this.new_supplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

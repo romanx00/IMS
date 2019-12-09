@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Units));
             this.lblUnit = new System.Windows.Forms.Label();
             this.txtUnit = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -91,6 +92,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtUnit);
             this.Controls.Add(this.lblUnit);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Units";
             this.Text = "Units";
             this.Load += new System.EventHandler(this.Units_Load);
