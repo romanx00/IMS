@@ -169,5 +169,19 @@ namespace IMS
         {
             this.Close();
         }
+
+        private void chkboxPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkboxPassword.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+                chkboxPassword.Text = "Hide";
+            }
+            else
+            {
+                chkboxPassword.Text = "Show";
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

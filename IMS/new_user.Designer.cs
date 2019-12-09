@@ -47,12 +47,14 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.chkboxPassword = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chkboxPassword);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.lblContact);
             this.panel1.Controls.Add(this.txtContact);
@@ -139,6 +141,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(346, 31);
             this.txtPassword.TabIndex = 8;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // lblLName
             // 
@@ -249,6 +252,17 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // chkboxPassword
+            // 
+            this.chkboxPassword.AutoSize = true;
+            this.chkboxPassword.Location = new System.Drawing.Point(639, 326);
+            this.chkboxPassword.Name = "chkboxPassword";
+            this.chkboxPassword.Size = new System.Drawing.Size(97, 29);
+            this.chkboxPassword.TabIndex = 16;
+            this.chkboxPassword.Text = "Show";
+            this.chkboxPassword.UseVisualStyleBackColor = true;
+            this.chkboxPassword.CheckedChanged += new System.EventHandler(this.chkboxPassword_CheckedChanged);
+            // 
             // new_user
             // 
             this.AcceptButton = this.btnAddUser;
@@ -292,5 +306,6 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.CheckBox chkboxPassword;
     }
 }
