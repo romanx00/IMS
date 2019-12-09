@@ -178,5 +178,11 @@ namespace IMS
             purchase_report rep = new purchase_report();
             rep.Show();
         }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Search ser = new Search();
+            ser.Show();
+        }
     }
 }

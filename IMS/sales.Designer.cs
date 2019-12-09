@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.cbUsers = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cbUsers = new System.Windows.Forms.ComboBox();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtProducts = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.lblCart = new System.Windows.Forms.Label();
+            this.lblQty = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblProducts = new System.Windows.Forms.Label();
+            this.txtQty = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.lbCart = new System.Windows.Forms.ListBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSavePrint = new System.Windows.Forms.Button();
-            this.lbCart = new System.Windows.Forms.ListBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtQty = new System.Windows.Forms.TextBox();
-            this.lblProducts = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblQty = new System.Windows.Forms.Label();
-            this.lblCart = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblFTotal = new System.Windows.Forms.Label();
             this.lbltotalAmount = new System.Windows.Forms.Label();
-            this.txtProducts = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -66,14 +66,21 @@
             this.panel1.Size = new System.Drawing.Size(776, 74);
             this.panel1.TabIndex = 0;
             // 
-            // lblUser
+            // lblDate
             // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(73, 18);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(55, 13);
-            this.lblUser.TabIndex = 0;
-            this.lblUser.Text = "Username";
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(371, 18);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(30, 13);
+            this.lblDate.TabIndex = 3;
+            this.lblDate.Text = "Date";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(444, 15);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // cbUsers
             // 
@@ -83,21 +90,14 @@
             this.cbUsers.Size = new System.Drawing.Size(121, 21);
             this.cbUsers.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // lblUser
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(444, 15);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(371, 18);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(30, 13);
-            this.lblDate.TabIndex = 3;
-            this.lblDate.Text = "Date";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(73, 18);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(55, 13);
+            this.lblUser.TabIndex = 0;
+            this.lblUser.Text = "Username";
             // 
             // panel2
             // 
@@ -116,6 +116,93 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(758, 143);
             this.panel2.TabIndex = 1;
+            // 
+            // txtProducts
+            // 
+            this.txtProducts.Location = new System.Drawing.Point(141, 6);
+            this.txtProducts.Name = "txtProducts";
+            this.txtProducts.Size = new System.Drawing.Size(100, 20);
+            this.txtProducts.TabIndex = 11;
+            this.txtProducts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProducts_KeyDown);
+            this.txtProducts.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtProducts_KeyUp);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(539, 14);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(31, 13);
+            this.lblTotal.TabIndex = 10;
+            this.lblTotal.Text = "Total";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(507, 55);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 9;
+            // 
+            // lblCart
+            // 
+            this.lblCart.AutoSize = true;
+            this.lblCart.Location = new System.Drawing.Point(58, 46);
+            this.lblCart.Name = "lblCart";
+            this.lblCart.Size = new System.Drawing.Size(37, 13);
+            this.lblCart.TabIndex = 8;
+            this.lblCart.Text = "Select";
+            // 
+            // lblQty
+            // 
+            this.lblQty.AutoSize = true;
+            this.lblQty.Location = new System.Drawing.Point(293, 63);
+            this.lblQty.Name = "lblQty";
+            this.lblQty.Size = new System.Drawing.Size(23, 13);
+            this.lblQty.TabIndex = 7;
+            this.lblQty.Text = "Qty";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(293, 14);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(31, 13);
+            this.lblPrice.TabIndex = 6;
+            this.lblPrice.Text = "Price";
+            // 
+            // lblProducts
+            // 
+            this.lblProducts.AutoSize = true;
+            this.lblProducts.Location = new System.Drawing.Point(58, 13);
+            this.lblProducts.Name = "lblProducts";
+            this.lblProducts.Size = new System.Drawing.Size(49, 13);
+            this.lblProducts.TabIndex = 5;
+            this.lblProducts.Text = "Products";
+            // 
+            // txtQty
+            // 
+            this.txtQty.Location = new System.Drawing.Point(347, 56);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Size = new System.Drawing.Size(100, 20);
+            this.txtQty.TabIndex = 4;
+            this.txtQty.Leave += new System.EventHandler(this.txtQty_Leave);
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(347, 6);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtPrice.TabIndex = 3;
+            this.txtPrice.Enter += new System.EventHandler(this.txtPrice_Enter);
+            // 
+            // lbCart
+            // 
+            this.lbCart.FormattingEnabled = true;
+            this.lbCart.Location = new System.Drawing.Point(141, 33);
+            this.lbCart.Name = "lbCart";
+            this.lbCart.Size = new System.Drawing.Size(120, 95);
+            this.lbCart.TabIndex = 2;
+            this.lbCart.Visible = false;
+            this.lbCart.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lbCart_KeyDown);
             // 
             // btnAdd
             // 
@@ -147,84 +234,6 @@
             this.btnSavePrint.UseVisualStyleBackColor = true;
             this.btnSavePrint.Click += new System.EventHandler(this.btnSavePrint_Click);
             // 
-            // lbCart
-            // 
-            this.lbCart.FormattingEnabled = true;
-            this.lbCart.Location = new System.Drawing.Point(141, 33);
-            this.lbCart.Name = "lbCart";
-            this.lbCart.Size = new System.Drawing.Size(120, 95);
-            this.lbCart.TabIndex = 2;
-            this.lbCart.Visible = false;
-            this.lbCart.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lbCart_KeyDown);
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(347, 6);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(100, 20);
-            this.txtPrice.TabIndex = 3;
-            this.txtPrice.Enter += new System.EventHandler(this.txtPrice_Enter);
-            // 
-            // txtQty
-            // 
-            this.txtQty.Location = new System.Drawing.Point(347, 56);
-            this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(100, 20);
-            this.txtQty.TabIndex = 4;
-            this.txtQty.Leave += new System.EventHandler(this.txtQty_Leave);
-            // 
-            // lblProducts
-            // 
-            this.lblProducts.AutoSize = true;
-            this.lblProducts.Location = new System.Drawing.Point(58, 13);
-            this.lblProducts.Name = "lblProducts";
-            this.lblProducts.Size = new System.Drawing.Size(49, 13);
-            this.lblProducts.TabIndex = 5;
-            this.lblProducts.Text = "Products";
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(293, 14);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(31, 13);
-            this.lblPrice.TabIndex = 6;
-            this.lblPrice.Text = "Price";
-            // 
-            // lblQty
-            // 
-            this.lblQty.AutoSize = true;
-            this.lblQty.Location = new System.Drawing.Point(293, 63);
-            this.lblQty.Name = "lblQty";
-            this.lblQty.Size = new System.Drawing.Size(23, 13);
-            this.lblQty.TabIndex = 7;
-            this.lblQty.Text = "Qty";
-            // 
-            // lblCart
-            // 
-            this.lblCart.AutoSize = true;
-            this.lblCart.Location = new System.Drawing.Point(58, 46);
-            this.lblCart.Name = "lblCart";
-            this.lblCart.Size = new System.Drawing.Size(26, 13);
-            this.lblCart.TabIndex = 8;
-            this.lblCart.Text = "Cart";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(539, 14);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(31, 13);
-            this.lblTotal.TabIndex = 10;
-            this.lblTotal.Text = "Total";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(507, 55);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(100, 20);
-            this.txtTotal.TabIndex = 9;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -251,15 +260,6 @@
             this.lbltotalAmount.Size = new System.Drawing.Size(13, 13);
             this.lbltotalAmount.TabIndex = 6;
             this.lbltotalAmount.Text = "0";
-            // 
-            // txtProducts
-            // 
-            this.txtProducts.Location = new System.Drawing.Point(141, 6);
-            this.txtProducts.Name = "txtProducts";
-            this.txtProducts.Size = new System.Drawing.Size(100, 20);
-            this.txtProducts.TabIndex = 11;
-            this.txtProducts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProducts_KeyDown);
-            this.txtProducts.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtProducts_KeyUp);
             // 
             // sales
             // 

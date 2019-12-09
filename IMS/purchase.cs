@@ -135,7 +135,7 @@ namespace IMS
                 // if not in stock table adds into purchase and stock tables
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Insert into Purchase  values ('" + cbProductName.Text + "','" + txtQuantity.Text + "','" + txtQuantity.Text + "','" + lblPurTotal.Text + "','" + dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") + "','" + cbEmpName.Text + "')";
+                cmd.CommandText = "Insert into Purchase  values ('" + cbProductName.Text + "','" + txtQuantity.Text + "','" + lblPriceSelect.Text + "','" + lblPurTotal.Text + "','" + dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") + "','" + cbEmpName.Text + "')";
                 cmd.ExecuteNonQuery();
 
                 SqlCommand cmd3 = con.CreateCommand();
