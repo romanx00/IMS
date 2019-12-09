@@ -112,7 +112,7 @@ namespace IMS
             da.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                lblPurTotal.Text = Convert.ToString(Convert.ToDouble(txtQuantity.Text) * Convert.ToDouble(dr["Price"]));
+                lblPurTotal.Text = Convert.ToString(Convert.ToInt32(txtQuantity.Text) * Convert.ToInt32(dr["Price"]));
 
             }
 
@@ -169,7 +169,11 @@ namespace IMS
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            
+            cbDepartment.Text = "";
+            cbEmpName.Text = "";
+            cbProductName.Text = "";
+            lblPriceSelect.Text = lblPurTotal.Text = ("");
+            txtQuantity.Text = ("");
            
            
         }
